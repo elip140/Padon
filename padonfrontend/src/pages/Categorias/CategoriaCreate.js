@@ -8,8 +8,8 @@ export default function CategoriaCreate() {
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}))
-      }
+        setInputs(values => ({ ...values, [name]: value }))
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -24,18 +24,18 @@ export default function CategoriaCreate() {
                         <span>Adicionar Categoria</span>
                     </div>
                     <form onSubmit={handleSubmit}>
-                    <input 
-        type="text" 
-        name="username" 
-        value={inputs.username || ""} 
-        onChange={handleChange}
-      />
-      <input 
-          type="number" 
-          name="age" 
-          value={inputs.age || ""} 
-          onChange={handleChange}
-        />
+                        <input
+                            type="text"
+                            name="Nome"
+                            value={inputs.username || ""}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="number"
+                            name="age"
+                            value={inputs.age || ""}
+                            onChange={handleChange}
+                        />
                         <input type="submit" />
                     </form>
                 </div>
